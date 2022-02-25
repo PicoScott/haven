@@ -1,0 +1,128 @@
+#!name=Q-Search
+#!desc=Safari Search Add-ons by Loyio
+
+
+[URL Rewrite]
+#gm   (Google图片)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$3 302
+
+# gh   (GitHub)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=gh\+([^&]+).+ https://github.com/search?q=$3 302
+
+# sof  (Stack Overflow)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=sof\+([^&]+).+ https://stackoverflow.com/search?q=$3 302
+
+# se  (StackExchange)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=se\+([^&]+).+ https://stackexchange.com/search?q=$3 302
+
+# wa  (WolframAlpha)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=wa\+([^&]+).+ https://www.wolframalpha.com/input/?i=$1 302
+
+# wiki  (维基百科)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=wiki(\+|%20)([^&]+).+ http://wikipedia.org/wiki/$4 302
+
+# wk  (维基中文)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$4 302
+
+# mg  (Magi)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=mg(\+|%20)([^&]+).+ https://magi.com/search?q=$4
+
+# tf  (Google 搜索 TestFlight)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$4&as_sitesearch=testflight.apple.com 302
+
+# > 翻译
+# yd   (有道)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$3 302
+
+# trc  (Google 译至中)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=trc\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$3 302
+
+# tre  (Google 译至英)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=tre\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$3 302
+
+# trj  (Google 译至日)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$3 302
+
+
+# 社区
+# db：豆瓣
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=db\+([^&]+).+ https://www.douban.com/search?source=suggest&q=$3 302
+
+# zh: 知乎
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$3 302
+
+# wb: 微博
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=wb\+([^&]+).+ https://s.weibo.com/weibo/$3 302
+
+# wx: 微信
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$3 302
+
+# rd  (Reddit)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=rd\+([^&]+).+ https://www.reddit.com/search?q=$3 302
+
+# tw (Twitter)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$3 302
+
+# ssp: 少数派
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=ssp\+([^&]+).+ https://sspai.com/search/post/$3 302
+
+# csdn: CSDN
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$3&t=&u= 302
+
+# > 购物
+# zdm: 什么值得买
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=zdm\+([^&]+).+ https://search.smzdm.com/?c=home&s=$3&v=b 302
+
+# amz: 亚马逊
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$3 302
+
+# jd : 京东
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=jd\+([^&]+).+ https://search.jd.com/Search?keyword=$3 302
+
+# tb: 淘宝
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=tb\+([^&]+).+ https://s.taobao.com/search?q=$3 302
+
+# tm: 天猫
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=tm\+([^&]+).+ https://list.tmall.com/search_product.htm?q=$3 302
+
+# 视频资源
+
+# ac (Acfun)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$3 302
+
+# bli (哔哩哔哩) 
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=bli\+([^&]+).+ https://search.bilibili.com/all?keyword=$3 302
+
+# ytb  (YouTube)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$3 302
+
+# ph  (PornHub) 
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=ph\+([^&]+).+ https://pornhub.com/video/search?search=$3 302
+
+# gd  (Google Drive)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$3 302
+
+# tgd  (t.me/gdurl 搜索 Google Drive 资源)
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=tgd\+([^&]+).+ https://t.me/s/gdurl?q=$3 302
+
+# 默认搜索
+
+# bi: 必应
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=bi\+([^&]+).+ https://cn.bing.com/search?q=$3 302
+
+# bd: 百度
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$3 302
+
+# ddg: DuckDuckGo 
+^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$3 302
+
+# 无指令: 谷歌
+#^https:\/\/(google|bing|duckduckgo|yandex|so|sougou).(com|hk|jp)\/\?q=([^&]+).+ https://www.google.com/search?q=$3 302
+
+[MITM]
+hostname = %APPEND% duckduckgo.com
+hostname = %APPEND% bing.com
+hostname = %APPEND% google.com
+hostname = %APPEND% yandex.com
+hostname = %APPEND% so.com
+hostname = %APPEND% sougou.com
